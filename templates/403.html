@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Not Authorised</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        User <b><i>"{{ user.username }}"</i></b> is authenticated but <span style="color: red; ">NOT AUTHORISED</span> for role "<b>{{ role }}</b>"<br><br>
+    {% endif %}
+    <a href="/">Home</a>&nbsp; &nbsp;<a href="/logout">Logout</a>
+</body>
+</html>

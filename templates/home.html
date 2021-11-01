@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Django Keycloak Integration PoC</title>
+</head>
+<body>
+<h1>Django Keycloak Integration PoC</h1>
+{% if user.is_authenticated %}
+    User "<b><i>{{ user.username }}</i></b>" is logged in.<br><a href="/logout">Logout</a>
+    <br><br>
+{%  endif %}
+
+<a href="/protected/test">Resource for members of the Test Role</a><br>
+<a href="/protected/security">Resource for members of the Security Role</a><br>
+
+</body>
+</html>
